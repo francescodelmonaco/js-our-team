@@ -86,9 +86,16 @@ form {
 input {
     padding: 0.5rem;
     width: 20rem;
-    border-radius: 1rem;
     border: 1px, solid, var(--color-pink);
     text-align: center;
+}
+
+button {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border: 0;
+    padding: 0.5rem;
+    width: 20rem;
 }
 
 /* responsive < 1440px */
