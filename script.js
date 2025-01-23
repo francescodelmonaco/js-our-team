@@ -43,7 +43,7 @@ const teamMembers = [
 const container = document.querySelector(".container");
 
 function addMember() {
-  for (let i = 1; i < teamMembers.length; i++) {
+  for (let i = 0; i < teamMembers.length; i++) {
     let element = teamMembers[i];
     container.innerHTML += `
       <div class="card">

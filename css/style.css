@@ -15,7 +15,7 @@ html {
 
 .flex-90 {
     margin: 0 auto;
-    width: 90%;
+    max-width: 90%;
 }
 
 .text-center {
@@ -60,4 +60,32 @@ p {
 
 .mail {
     color: var(--color-lightblue);
+}
+
+/* responsive < 1440px */
+@media screen and (max-width: 1440px) {
+
+    .card {
+        /* background-color: var(--color-black); */
+        /* color: var(--color-white); */
+        flex-basis: calc(100% / 2 - 1rem);
+        /* display: flex; */
+        /* justify-content: space-between; */
+        /* height: 8rem; */
+    }
+
+}
+
+/* responsive < 1000 */
+@media screen and (max-width: 1000px) {
+    
+    .card {
+        /* background-color: var(--color-black); */
+        /* color: var(--color-white); */
+        flex-basis: 100%;
+        /* display: flex; */
+        /* justify-content: space-between; */
+        /* height: 8rem; */
+    }
+
 }
