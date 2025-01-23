@@ -40,6 +40,8 @@ const teamMembers = [
   }
 ];
 
+
+// add members from object
 const container = document.querySelector(".container");
 
 function addMember() {
@@ -62,3 +64,40 @@ function addMember() {
 };
 
 addMember();
+
+// add members with form
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const role = document.getElementById('role').value;
+  const email = document.getElementById('email').value;
+  const img = document.getElementById('img').value;
+
+  teamMembers.push(
+    {
+      name,
+      role,
+      email,
+      img,
+    }
+  )
+
+  console.log(teamMembers);
+
+  container.innerHTML += `
+      <div class="card">
+        <figure>
+          <img height="100%" src="${img}" alt="">
+        </figure>
+
+        <div class="user-info">
+          <h5><strong>${name}</strong></h5>
+          <span>${role}</span>
+          <span class="mail">${email}</span>
+        </div>
+      </div>
+    `
+})
